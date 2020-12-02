@@ -1,4 +1,1 @@
-# hello-world
-just another one
-introduction to github
-learning 
+100 Days of Data structure an algorithms
