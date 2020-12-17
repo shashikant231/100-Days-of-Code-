@@ -1,0 +1,41 @@
+class Stack:
+    
+    #Everytime the instance of class is creareted ,a new stack(List) will be created
+    def __init__(self):
+        self.items = []
+    #it will check wheather the stack is empty or not
+    def isEmpty(self):
+        return self.items == []
+     #This fuction will push the elements into stack
+    def push(self, item):
+        self.items.append(item)
+    #Pops out the first element of the stack(i.e remove the first element from the stack)
+    def pop(self):
+        return self.items.pop()
+    ## will return the first element present in the stack
+    def peek(self):
+        return self.items[len(self.items)-1]
+    #Return the size of the stack
+    def size(self):
+        return len(self.items)
+    
+    #Ths will return the elements present in the stack
+    def showelements(self):
+        return self.items
+        
+        
+        
+        
+     
+     
+s = Stack()    
+s.push(5)
+s.push("monkey")
+s.peek()
+s.showelements()
+s.push(123)
+s.push("hey")
+
+s.showelements()     
+        
+        
