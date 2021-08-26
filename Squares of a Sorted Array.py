@@ -10,7 +10,7 @@ Output: [0,1,9,16,100]
 Explanation: After squaring, the array becomes [16,1,0,9,100].
 After sorting, it becomes [0,1,9,16,100]
 '''
-#Divide the array into two halves,positive and negative and store there squares into two lists
+# Divide the array into two halves,positive and negative and store there squares into two lists
 # At this point we have two sorted list ,we can easily merge the two sorted list
 def sortedSquares(nums):
         pos = []
