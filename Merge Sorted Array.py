@@ -35,3 +35,33 @@ class Solution:
                 nums1[j] ,nums1[j-1] = nums1[j-1],nums1[j]
                 j -= 1
         nums1
+
+#2nd solution,using merge sort function ,which merge to sorted array
+
+
+class Solution:
+    def merge(self, nums1, m, nums2, n):
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        i = j = k = 0
+        n1 = nums1[:m]
+        while i < m and j < n:
+            if n1[i] >= nums2[j]:
+                nums1[k] = nums2[j]
+                j += 1
+            else:
+                nums1[k] = n1[i]
+                i += 1
+            k += 1
+            
+        while i < m:
+            
+            nums1[k] = n1[i]
+            i+=1
+            k+=1
+
+        while j < n:
+            nums1[k] = nums2[j]
+            j+=1
+            k+=1
