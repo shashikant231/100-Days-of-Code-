@@ -10,7 +10,7 @@ Example 3:
 Input: s = "aabb"
 Output: -1
 '''
-
+#solution 1
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         table = {}
@@ -26,4 +26,20 @@ class Solution:
             
             
         return -1
+
+#solution2
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        table = {}
+        for i in s:
+            if i in table:
+                table[i] += 1
+            else:
+                table[i] = 1
+        index = -1
+        for i in range(len(s)):
+            if table[s[i]] == 1:
+                return i
+            
+        return index
             
